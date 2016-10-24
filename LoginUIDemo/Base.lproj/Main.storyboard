@@ -1,14 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LoginUIDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +17,126 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="KRB-Z4-pur">
+                                <frame key="frameInset" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="bap-bI-erk">
+                                <frame key="frameInset" minX="52" minY="120" width="271" height="40"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="Dot" translatesAutoresizingMaskIntoConstraints="NO" id="Xzj-lx-vgM">
+                                <frame key="frameInset" minX="108" minY="106" width="16" height="15"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" background="TextFieldBoard" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Qrj-zP-otI">
+                                <frame key="frameInset" minX="52" minY="221" width="271" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="passwd" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" background="TextFieldBoard" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="M1i-s9-tcv">
+                                <frame key="frameInset" minX="52" minY="277" width="271" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESG-wl-q0Y">
+                                <frame key="frameInset" minX="52" minY="398" width="271" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Login" backgroundImage="loginbg"/>
+                                <connections>
+                                    <action selector="LoginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WrA-B4-yzf"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCa-Tg-7pu">
+                                <frame key="frameInset" minX="52" minY="350" width="271" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Login Error: name=passwd" backgroundImage="logerrorbg">
+                                    <color key="titleColor" red="0.95110632850607291" green="1" blue="0.94294318919393116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rqy-Oz-8sW">
+                                <frame key="frameInset" minX="327" minY="289" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="superLook"/>
+                                <connections>
+                                    <action selector="touchDownShow:" destination="BYZ-38-t0r" eventType="touchDown" id="aYn-IE-hFV"/>
+                                    <action selector="touchUpInsideHide:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BDn-Jo-3qc"/>
+                                    <action selector="touchUpOutsideHide:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="ttt-uR-gKm"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="dot" destination="Xzj-lx-vgM" id="IX3-hQ-BHi"/>
+                        <outlet property="logerror" destination="rCa-Tg-7pu" id="fsb-CG-bM4"/>
+                        <outlet property="login" destination="ESG-wl-q0Y" id="CVf-5w-WSe"/>
+                        <outlet property="logo" destination="bap-bI-erk" id="ayX-LJ-0Ar"/>
+                        <outlet property="password" destination="M1i-s9-tcv" id="3eq-wz-SyU"/>
+                        <outlet property="superLook" destination="Rqy-Oz-8sW" id="han-XK-Vgi"/>
+                        <outlet property="username" destination="Qrj-zP-otI" id="oam-va-eHt"/>
+                        <segue destination="tf7-id-Yqr" kind="showDetail" identifier="LoginSuccess" action="showViewController:sender:" id="xWV-cN-2D1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="35.532233883058474"/>
+        </scene>
+        <!--Main Face View Controller-->
+        <scene sceneID="B6A-IZ-7Zr">
+            <objects>
+                <viewController storyboardIdentifier="testViewToView" id="tf7-id-Yqr" customClass="MainFaceViewController" customModule="LoginUIDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lLy-wl-rV6"/>
+                        <viewControllerLayoutGuide type="bottom" id="l18-eo-Frp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xyR-bP-yn4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="l9E-ZK-31b">
+                                <frame key="frameInset" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0s-HS-AAC">
+                                <frame key="frameInset" minX="16" minY="323" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grK-Jk-dgX">
+                                <frame key="frameInset" minX="170" minY="378" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="BackToLogin:" destination="tf7-id-Yqr" eventType="touchUpInside" id="JK4-eX-d1C"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="welcomeText" destination="k0s-HS-AAC" id="VYY-SA-vPj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TBa-8b-uzP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="781.60000000000002" y="35.532233883058474"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background" width="375" height="667"/>
+        <image name="Dot" width="16" height="15"/>
+        <image name="Logo" width="271" height="40"/>
+        <image name="TextFieldBoard" width="269" height="36"/>
+        <image name="logerrorbg" width="269" height="40"/>
+        <image name="loginbg" width="269" height="40"/>
+        <image name="superLook" width="16" height="17"/>
+    </resources>
 </document>
